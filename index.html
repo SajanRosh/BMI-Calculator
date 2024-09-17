@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">BMI Calculator</div>
+    <div class="calculator">
+        <div class="row">
+            <p>Height</p>
+            <div class="descr">
+                <div class="weight-flex">
+                    <div class="height">
+                        <input type="number" class="input" id="heightInput">
+                    </div>
+                    <div class="height-key-value" onclick="heightChanged()">
+                        <span class="height-key" id="height-key">m</span>
+                        <span class="height-value">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="rgb(0,124,178)" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          </svg>
+                        </span>
+                    </div>
+                </div>      
+            </div>
+        </div>
+        <div class="row">
+            <p>Weight</p>
+            <div class="weightDesc">
+                <div class="weight-flex">
+                    <div class="weight">
+                        <input type="number" id="weightInput" class="input">
+                    </div>
+                    <div class="weight-key-value" onclick="weightChanged()">
+                        <span class="weight-key" id="weight-key">kg</span>
+                        <span class="weight-value">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="rgb(0,124,178)" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="height-change" id="height-change">
+                    <div class="weight-row" onclick="height('cm')">centimeters (cm)</div>
+                    <div class="weight-row" onclick="height('m')">meters (m)</div>
+                    <div class="weight-row" onclick="height('in')">inches (in)</div>
+                    <div class="weight-row" onclick="height('ft')">feet (ft)</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p>BMI</p>
+            <div class="bmi-adjust">
+                <div class="bmiMain" id="bmiResult"></div>
+                <div class="weight-change" id="weight-change">
+                    <div class="weight-row" onclick="weight('kg')">kilograms (kg)</div>
+                    <div class="weight-row" onclick="weight('lb')">pounds (lb)</div>
+                    <div class="weight-row" onclick="weight('st')">stones (st)</div>
+                </div>
+            </div>
+        </div>
+        <div class="calcrow">
+            <button class="calc" onclick="calculate()">Calculate</button>
+        </div>
+        <div class="row">
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.heading{
+    margin: 20px auto;
+    width: 500px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #9c89aec4;
+}
+.calculator{
+    width: 400px;
+    background-color: #eee;
+    margin: 30px auto;
+    height: 252px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    height: 19px;
+    border: 1px solid lightgrey;
+}
+.desc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.input{
+    border: none;
+    background-color: #eee;
+    outline: none;
+    text-align: right;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.calc{
+    background-color: rgba(0,0,0,0.71);
+    width: 100%;
+    color: white;
+    margin: 0;
+    padding: 12px 15px;
+    border: none;
+    cursor: pointer;
+    height: 50px;   
+}
+.result{
+    text-align: center;
+    margin: auto;
+}
+.weight-flex{
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+.weight-key-value, .height-key-value{
+    text-decoration: underline;
+    color: rgba(0,124,178);
+    display: flex;
+    align-items: center;
+}
+.weight-change{
+    background-color: #eee;
+    width: 200px;
+    height: 120px;
+    margin-top: 69px;
+    margin-right: -16px;
+    z-index: 1;
+    border: 1px solid lightgrey;
+    border-bottom: none;
+    display: none;
+}
+.weight-desc{
+    z-index: 1;
+    width: 50%;
+    height: 50px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+.weight-row{
+    border-bottom: 1px solid lightgray;
+    padding: 9px 12px;
+}
+.weight-row:hover, height-row:hover{
+    background-color: rgba(210,202,217,0.473);
+}
+.height-change{
+    background-color: #eee;
+    width: 225px;
+    height: 160px;
+    margin-top: -40px;
+    margin-right: -15px;
+    z-index: 1;
+    border: 1px solid lightgray;
+    border-bottom: none;
+    position: absolute;
+    display: none;
+}
+.bmiMain{
+    position: absolute;
+    z-index: 0;
+}
+.bmi-adjust{
+    position: relative;
+    z-index: 0;
+    width: 50%;
+    height: 50px;
+    justify-content: end;
+    display: flex;
+    align-items: center;
+}
+.weight-value,.height-value{
+    margin-top: 7px;
+}
+.height{
+    margin-right: -6px;
+}
